@@ -19,7 +19,7 @@ var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/googlebooks";
 
 // Send every other request to the React app
 // Define any API routes before this runs
-mongoose.connect(MONGODB_URI, {
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/googlebooks", {
   useUnifiedTopology: true,
   useNewUrlParser: true
 });
